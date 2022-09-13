@@ -11,8 +11,11 @@
 <br>
 
 <table style="width:30%">
+  
   <tr><td>1 кв.</td> <td>2 кв.</td> <td>3 кв.</td> <td>4 кв.</td></tr>
 </table>
-<br>
+  <br>
 <div class="result">Здесь будет результат запроса</div>
 
+
+<div class="year"></div>
