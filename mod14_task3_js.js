@@ -28,10 +28,12 @@ const select = document.querySelector('select');
 function displayResult(apiData) {
   let table = '';
   
-  if (select.value === 'no') {
-      // message = 'Выберите, пожалуйста, год'
-      console.log('Выберите, пожалуйста, год')
-    } 
+    if (select.value === 'no') {
+      message.innerHTML = 'Выберите, пожалуйста, год';
+//       console.log('Выберите, пожалуйста, год')
+    } else {
+      message.innerHTML = '';
+    };
   
   apiData.forEach(item => {
       if (item.year == select.value) {
