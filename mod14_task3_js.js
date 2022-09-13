@@ -23,17 +23,20 @@ function useRequest(url, callback) {
 const resultTable = document.querySelector('table');
 const btnNode = document.querySelector('.request');
 const select = document.querySelector('select');
-// const message = document.querySelector('.message')
+const message = document.querySelector('.message');
+const result = document.querySelector('.result');
+const year = document.querySelector('.year');
 
 function displayResult(apiData) {
   let table = '';
   
-    if (select.value === 'no') {
+  if (select.value === 'no') {
       message.innerHTML = 'Выберите, пожалуйста, год';
 //       console.log('Выберите, пожалуйста, год')
     } else {
       message.innerHTML = '';
       result.innerHTML = '';
+      year.innerHTML = select.value;
     };
   
   apiData.forEach(item => {
@@ -48,6 +51,8 @@ function displayResult(apiData) {
       `
     }
   });
+  
+  
   
   resultTable.innerHTML += table;
 }
