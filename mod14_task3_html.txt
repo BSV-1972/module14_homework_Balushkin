@@ -4,13 +4,15 @@
   <option value="2018">2018</option>
   <option value="2019">2019</option>
 </select>
-
+<br>
+<div class="message"></div>
+<br>
 <button class="btn request">Загрузить отчет</button>
-
-<!-- <div class="result">Здесь будет результат запроса</div> -->
+<br>
 
 <table style="width:30%">
   <tr><td>1 кв.</td> <td>2 кв.</td> <td>3 кв.</td> <td>4 кв.</td></tr>
 </table>
+<br>
+<div class="result">Здесь будет результат запроса</div>
 
-<!-- <div class="message"></div> -->
