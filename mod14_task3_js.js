@@ -33,6 +33,7 @@ function displayResult(apiData) {
 //       console.log('Выберите, пожалуйста, год')
     } else {
       message.innerHTML = '';
+      result.innerHTML = '';
     };
   
   apiData.forEach(item => {
