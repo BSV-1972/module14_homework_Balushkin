@@ -30,12 +30,13 @@ btn.addEventListener('click', async () => {
       urlAddress = `https://picsum.photos/v2/list/?page=${pageNum}&limit=${limit}&width=324&height=254`;
       localStorage.setItem('url_address', urlAddress);
       useRequest(urlAddress, displayResult); 
-      // console.log('Из ф-ии', urlAddress);  
+      console.log(`Состояние localStorage (из ф-ии): , ${urlAddress}`);  
     } 
   }
 });
 
-// console.log("При загрузке", localStorage.getItem('url_address'));
+let localStorageCondition = localStorage.getItem('url_address')
+console.log(`Состояние localStorage (при загрузке): ${localStorageCondition}`);
 
 function useRequest(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -67,7 +68,6 @@ const widthNode = document.querySelector('.width');
 
 function displayResult(apiData) {
   let cards = '';
-  // console.log('start cards', cards);
   
   apiData.forEach(item => {
     if (heightNode.value == "" || widthNode.value == "") {
@@ -94,8 +94,6 @@ function displayResult(apiData) {
       cards = cards + cardBlock;
     }
   });
-  
-  // console.log('end cards', cards);
     
   resultNode.innerHTML = cards;
 }
